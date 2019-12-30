@@ -1,2 +1,2 @@
-import r
-if
+import random
+print
