@@ -26,6 +26,5 @@ def scrap(page='https://bookvoed.ee/search?q=white+fang',file_name='books.csv'):
     print(books_stuff)
 
     books_stuff.to_csv(file_name, encoding="cp1251")
-    
-scrap('https://bookvoed.ee/search?q=%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5', 'hi.csv')
-    
+
+scrap('https://bookvoed.ee/search?q=программирование', 'hi.csv')
