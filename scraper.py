@@ -1,8 +1,9 @@
+# bookvoed.ee scraper
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-def scrap(page,file_name='books.csv'):
+def scrap(page='https://bookvoed.ee/search?q=white+fang',file_name='books.csv'):
     page = requests.get(page)
     soup = BeautifulSoup(page.content, 'html.parser')
     items = soup.findAll(class_='o-row')
