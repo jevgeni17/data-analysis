@@ -3,11 +3,11 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-def scrap(page='https://bookvoed.ee/search?q=white+fang',file_name='books.csv'):
+def scrap(page='https://bookvoed.ee/search?q=white+fang'):
     page = requests.get(page)
     soup = BeautifulSoup(page.content, 'html.parser')
     items = soup.findAll(class_='o-row')
-
+    print(items)
     #print(week[0].find(class_='title').get_text())
     #print(week[0].find(class_='author').get_text())
     q = items[0].find(class_='buy')
@@ -27,4 +27,4 @@ def scrap(page='https://bookvoed.ee/search?q=white+fang',file_name='books.csv'):
 
     books_stuff.to_csv(file_name, encoding="cp1251")
 
-scrap('https://bookvoed.ee/search?q=программирование', 'hi.csv')
+scrap()
